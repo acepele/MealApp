@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="273dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtTitle"
+        android:textColor="#F44336"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idAmount"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/idAmount"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/idChoices"
+        android:layout_width="379dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:entries="@array/txtChoices"
+        android:prompt="@string/prompt"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idAmount" />
+
+    <Button
+        android:id="@+id/idBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#F44336"
+        android:text="@string/buttonCharge"
+        app:iconTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idChoices"
+        app:strokeColor="#F44336" />
+
+    <ImageView
+        android:id="@+id/idImg"
+        android:layout_width="271dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtn"
+        app:srcCompat="@drawable/meal" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="347dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/idImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
